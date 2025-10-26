@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FTC Team 28118 | AB-MMP</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #1e1e1e; /* dark grey */
-      color: #f2f2f2;
-      font-family: 'Arial', sans-serif;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      background-color: #2a2a2a;
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 1rem 2rem;
-      background-color: #262626;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-    h2 {
-      color: #00b894;
-    }
-    p {
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agamjit Bal | MIT Maker Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>FTC Team 28118 — AB-MMP Portfolio</header>
-  <main>
-    <h2>2025–2026 Season Overview</h2>
-    <p>
-      Welcome to our FTC Team 28118 portfolio! This season, our focus was on improving our robot’s 
-      precision and reliability. We integrated a new linear slide system and advanced our autonomous 
-      routines using AprilTags for navigation.
-    </p>
-    <p>
-      Our outreach included mentoring two FLL teams and hosting a robotics demo at the local library. 
-      As a team, we learned to collaborate more effectively, document our progress, and tackle 
-      engineering challenges head-on.
-    </p>
-    <p>
-      Stay tuned for updates as we prepare for Regionals and share more about our design journey.
-    </p>
-  </main>
-  <footer>© 2025 FTC Team 28118 | Designed by Agamjit Bal</footer>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agamjit Bal</h1>
+            <h2>Maker | Lead CAD Designer</h2>
+            <p>Showcasing my projects in FTC Robotics and beyond</p>
+            <a href="#projects" class="scroll-down">▼</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <!-- FTC Project Card -->
+            <div class="project-card" onclick="openModal()">
+                <img src="ftc-robot.jpg" alt="FTC Robot Design">
+                <div class="project-info">
+                    <h3>FTC Robotics – Team 28118 Robostallions</h3>
+                    <p>Role: Lead CAD Designer. Click to see full project details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for FTC Project -->
+    <div id="ftcModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>FTC Robotics – Team 28118 Robostallions</h2>
+            <p>I began learning CAD in 8th grade using <strong>Onshape</strong>, diving into the world of 3D modeling and mechanical design. For the 2025 FTC season, I applied these skills to design and build the <strong>drivetrain for our robot</strong> for Team 28118, the Robostallions. This involved planning and assembling the core mechanical systems that allow the robot to move efficiently and reliably on the field.</p>
+            <p>During the project, I focused on <strong>precision and efficiency</strong>, making sure every gear, motor, and wheel was optimized for speed, torque, and durability. I collaborated closely with my teammates to integrate the drivetrain with other subsystems, such as the arm mechanism and intake system, ensuring the robot worked seamlessly as a whole.</p>
+            <p>I also learned <strong>problem-solving under constraints</strong>, adapting my designs when we faced challenges with weight distribution, space limitations, and motor placement. Using Onshape’s simulation and assembly tools, I was able to test movements virtually before building physical prototypes, saving time and materials.</p>
+            <p>This experience strengthened my <strong>CAD and engineering skills</strong>, taught me how to work effectively in a team environment, and gave me practical insight into <strong>robot design, prototyping, and iterative improvement</strong>. Beyond just building the robot, I gained experience in documenting designs, thinking critically about efficiency, and learning the importance of collaboration in STEM projects.</p>
+            <p>Overall, this FTC project was my first hands-on experience bringing a <strong>complex mechanical system from concept to reality</strong>, and it solidified my passion for robotics, design, and innovation. I’m excited to continue expanding my portfolio with new projects, pushing the limits of what I can design and create.</p>
+        </div>
+    </div>
+
+    <!-- About / Skills Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I’m a maker passionate about robotics, CAD, and coding. I enjoy designing, prototyping, and bringing projects from concept to reality.</p>
+        <ul>
+            <li>CAD: SolidWorks, Fusion 360, Onshape</li>
+            <li>Programming: Java, Python</li>
+            <li>Robotics: FTC/FTC Mechanisms, Team Collaboration</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: <a href="mailto:agamjit@example.com">agamjit@example.com</a> | <a href="https://github.com/agamjitb">GitHub</a></p>
+        <p>MIT Maker Portfolio</p>
+    </footer>
+
+    <script>
+        // Modal Functions
+        const modal = document.getElementById("ftcModal");
+        function openModal() {
+            modal.style.display = "block";
+        }
+        function closeModal() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
